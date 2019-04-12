@@ -1,0 +1,13 @@
+{% extends 'admin/base.html.twig' %}
+{% block admin_content %}
+    {% form_theme form 'Form/bulma.html.twig' %}
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button type="submit" class="button is-link is-block">Envoyer</button>
+    {{ form_end(form) }}
+
+
+    <a href="{{ path('user_list') }}" class="button is-link">Retourner à la liste</a>
+
+
+{% endblock %}

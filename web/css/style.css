@@ -1,0 +1,20 @@
+.full-screen
+{
+    height: 90vh;
+}
+.login-form{
+    margin: auto;
+}
+
+.select{
+    height: auto !important;
+}
+.button{
+    margin-top: 0.5em;
+}
+td .button{
+    margin-top: 0;
+}
+.notification{
+    padding: 1em;
+}

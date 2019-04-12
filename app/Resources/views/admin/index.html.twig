@@ -1,0 +1,27 @@
+{% extends 'admin/base.html.twig' %}
+{% block admin_content %}
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Panneau d'administration
+                </h1>
+                <h2 class="subtitle">
+                    Ajouter un espace de travail
+                </h2>
+
+                <p>Pour ajouter un espace de travail il suffit de :</p>
+                <ul>
+                    <li>- Cliquer sur le bouton "Add to Slack"</li>
+                    <li>- Après avoir cliqué sur le bouton choisir la bonne équipe à importer en haut à droite</li>
+                    <li>- Valider et patienter pendant l'importation</li>
+                </ul>
+
+                <p>
+                    <a href="https://slack.com/oauth/authorize?scope=channels:read,channels:history,files:read,pins:read,reactions:read,search:read,team:read,users:read,emoji:read,&client_id=195611284096.262547545429"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
+                </p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

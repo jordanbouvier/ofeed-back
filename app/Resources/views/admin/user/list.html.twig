@@ -1,0 +1,29 @@
+{% extends 'admin/base.html.twig' %}
+{% block admin_content %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th><abbr title="Position">Id</abbr></th>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <th>{{ user.id }}</th>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.role.name }}</td>
+                <td>
+                    <a href="{{ path('user_edit', {'id': user.id}) }}" class="button is-link">Editer</a>
+                </td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+{% endblock %}

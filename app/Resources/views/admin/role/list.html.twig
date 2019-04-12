@@ -1,0 +1,25 @@
+{% extends 'admin/base.html.twig' %}
+{% block admin_content %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th><abbr title="Position">Id</abbr></th>
+            <th>Nom</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for role in roles %}
+            <tr>
+                <th>{{ role.id }}</th>
+                <td>{{ role.name }}</td>
+
+                <td>
+                    <a href="{{ path('edit_role', {'id': role.id}) }}" class="button is-link">Editer</a>
+                </td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('react/css/app.css') }}">
+{% endblock %}
+{% block body %}
+    <div id="root"> </div>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('react/js/app.js') }}"></script>
+    <script>relativePath = "{{ app.request.baseUrl }}"</script>
+    <script>require('src/index');</script>
+{% endblock %}

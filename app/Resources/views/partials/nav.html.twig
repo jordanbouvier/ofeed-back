@@ -1,0 +1,49 @@
+<nav class="navbar" aria-label="dropdown navigation">
+    <div class="navbar-brand">
+
+        <a href="#" class="navbar-item">
+            <p>O'Feed</p>
+
+        </a>
+
+        <button class="button navbar-burger" data-target="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <a href="{{ path('edit_profile') }}" class="navbar-item">
+                <span class="icon">
+                    <i class="fa fa-user"></i>
+                </span>Mon compte
+            </a>
+            {% if is_granted('ROLE_ADMIN') %}
+                <a href="{{ path('admin_homepage') }}" class="navbar-item">
+                    <span class="icon">
+                        <i class="fa fa-user-secret"></i>
+                    </span>Pannel admin
+                </a>
+            {% endif %}
+            <a href="{{ path('logout') }}" class="navbar-item">
+                <span class="icon">
+                    <i class="fa fa-sign-out"></i>
+                </span>Se déconnecter
+            </a>
+        {% else %}
+            <a href="{{ path('signup') }}" class="navbar-item">
+                <span class="icon">
+                    <i class="fa fa-plus"></i>
+                </span>S'inscrire</a>
+            <a href="{{ path('login') }}" class="navbar-item">
+                <span class="icon">
+                    <i class="fa fa-sign-in"></i>
+                </span>Se connecter
+            </a>
+        {% endif %}
+
+    </div>
+</nav>

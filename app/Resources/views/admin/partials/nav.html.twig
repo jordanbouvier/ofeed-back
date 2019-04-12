@@ -1,0 +1,7 @@
+<div class="tabs">
+    <ul>
+        <li class="{{ app.request.requestUri == path('admin_homepage') ? 'is-active' : '' }}"><a href="{{ path('admin_homepage') }}">Accueil</a></li>
+        <li class="{{ app.request.requestUri == path('user_list') ? 'is-active' : '' }}"><a href="{{ path('user_list') }}">Utilisateurs</a></li>
+        <li class="{{ app.request.requestUri == path('role_list') ? 'is-active' : '' }}"><a href="{{ path('role_list') }}">Rôles</a></li>
+    </ul>
+</div>
